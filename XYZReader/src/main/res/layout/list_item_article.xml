@@ -1,5 +1,6 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvArticle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="4dp"
@@ -35,7 +36,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@color/grey_900"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:ellipsize="end"
             android:maxLines="4" />
@@ -50,7 +51,7 @@
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
             android:paddingBottom="16dp"
-            android:textColor="@color/grey_500"
+            android:textColor="@color/grey_100"
             android:maxLines="2"
             android:ellipsize="end" />
     </LinearLayout>
