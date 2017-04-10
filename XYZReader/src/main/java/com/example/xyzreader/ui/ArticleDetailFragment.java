@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
@@ -58,6 +59,7 @@ public class ArticleDetailFragment extends Fragment implements
     private View mPhotoContainerView;
     private ImageView mPhotoView;
     private int mScrollY;
+    private static int mLastScrollY = 0;
     private boolean mIsCard = false;
     private int mStatusBarFullOpacityBottom;
 
@@ -132,6 +134,17 @@ public class ArticleDetailFragment extends Fragment implements
                 getActivityCast().onUpButtonFloorChanged(mItemId, ArticleDetailFragment.this);
                 mPhotoContainerView.setTranslationY((int) (mScrollY - mScrollY / PARALLAX_FACTOR));
                 updateStatusBar();
+
+                //Listen for up and down scroll
+                //when gain number hide the fab or else show it
+                if(mScrollY == 0){//Show fab
+                    ((FloatingActionButton)mRootView.findViewById(R.id.share_fab)).show();
+                } else if (mScrollY > mLastScrollY) {
+                    ((FloatingActionButton)mRootView.findViewById(R.id.share_fab)).hide();
+                } else if (mScrollY < mLastScrollY) {
+                    ((FloatingActionButton)mRootView.findViewById(R.id.share_fab)).show();
+                }
+                mLastScrollY = mScrollY;
             }
         });
 
