@@ -20,7 +20,7 @@
 
     <color name="color_primary">@color/green_500</color>
     <color name="color_primary_dark">@color/green_900</color>
-    <color name="color_accent">@color/green_a700</color>
+    <color name="color_accent">@color/red_a700</color>
 
     <!--Black and White-->
     <color name="black">#000000</color>

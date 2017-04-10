@@ -105,8 +105,8 @@
         android:contentDescription="@string/action_share"
         android:stateListAnimator="@animator/fab_state_list_anim"
         app:fabSize="normal"
-        app:elevation="6dp"
-        app:pressedTranslationZ="12dp"
+        app:elevation="@dimen/fab_elevation"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
         app:borderWidth="0dp"
         android:layout_gravity="bottom|right|end"/>
 
